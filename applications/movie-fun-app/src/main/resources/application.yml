@@ -4,7 +4,8 @@ spring:
     properties.hibernate.dialect: org.hibernate.dialect.MySQL5Dialect
 
   datasource:
-    url: jdbc:mysql://localhost:3306/movies?useSSL=false
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/movies?useSSL=false&serverTimezone=UTC
     username: root
     tomcat:
       max-active: 4
@@ -21,6 +22,7 @@ logging.level:
   org.superbiz.moviefun: DEBUG
 
 s3:
-  accessKey: <access key id>
-  secretKey: <secret access key>
-  bucketName: <name of the bucket>
+  accessKey: AKIAJSDWIYOEUKLDT2VQ
+  secretKey: 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
+  bucketName: moviefun-dee
+  endpoint: s3.amazonaws.com
